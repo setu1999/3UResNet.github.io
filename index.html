@@ -270,31 +270,21 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            Liver cirrhosis demands accurate, interpretable MRI analysis to support timely diagnosis and staging, yet existing methods often
+            decouple segmentation from classification and lack the explainability required for clinical use. This work introduces 3UResNet, 
+            an ensemble of U-Net, TransUNet++, and Attention U-Net with ResNet50 as encoder, designed for robust multiclass cirrhosis segmentation
+            on 2D T2-weighted MRI from the CirrMRI600+ dataset. A total of 5,364 training, 674 validation, and 664 test samples across mild, moderate, 
+            and severe classes were preprocessed with augmentation, normalization, and mask binarization. 
+            This research also designed three Vision Transformer–based models, namely SwinUnet, CCTUnet, and EaNetUnet for segmentation. 
+            On the test set, 3UResNet achieved a Dice score of 0.9516 and a mean Intersection over Union of 0.9077 across all classes, outperforming the transformer 
+            
+            baselines. After accurate segmentation, this study used the segmented masks to extract shape features and applied convolutional neural networks (CNN) to extract 
+            
+            visual features for classification. DenseNet121 performed best for mild cirrhosis (95%), while CoAnNet achieved higher accuracy for moderate (80%) and severe 
+            cirrhosis (94%). Here, a WeightedRandom sampler and focal loss were employed to mitigate class imbalance during training, ensuring results reflect real-world
+            clinical distributions. Model interpretability is strengthened with LIME and Grad-CAM, highlighting clinically meaningful liver regions and aligning attention 
+            with cirrhotic anatomy across severity levels. This study demonstrates a practical end-to-end framework uniting high-fidelity segmentation with severity staging 
+            and transparent rationale, paving the way for clinical adoption.
           </p>
         </div>
       </div>
