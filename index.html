@@ -432,6 +432,286 @@
   </div>
 </section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    
+    <h2 class="title is-3 has-text-centered">Quantitative Results: Segmentation</h2>
+    <div class="content has-text-centered" style="margin-bottom: 30px;">
+      <p>
+        Performance comparison of <strong>3UResNet</strong> against Transformer-based and CNN-based baselines using Dice Score and Mean IoU.
+      </p>
+    </div>
+
+    <div class="box" style="overflow-x: auto; border-top: 5px solid #4caf50;"> 
+      <h4 class="title is-5 has-text-centered">Table 1: Segmentation Performance of Integrated Transformer & ViT Models</h4>
+      <table class="table is-bordered is-striped is-hoverable is-fullwidth has-text-centered">
+        <thead style="background-color: #e8f5e9;">
+          <tr>
+            <th colspan="2" style="vertical-align: middle;">Model Architecture</th>
+            <th colspan="2">Mild</th>
+            <th colspan="2">Moderate</th>
+            <th colspan="2">Severe</th>
+          </tr>
+          <tr>
+            <th>Encoder</th>
+            <th>Decoder</th>
+            <th>Dice</th>
+            <th>mIoU</th>
+            <th>Dice</th>
+            <th>mIoU</th>
+            <th>Dice</th>
+            <th>mIoU</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background-color: #c8e6c9; font-weight: bold; border: 2px solid #4caf50;">
+            <td>ResNet50</td><td>TransUNetPP (3UResNet)</td>
+            <td>0.9532</td><td>0.9106</td><td>0.9578</td><td>0.9191</td><td>0.9310</td><td>0.8710</td>
+          </tr>
+          <tr>
+            <td>ResNet50</td><td>Attention U-Net</td>
+            <td>0.9605</td><td>0.9239</td><td>0.9572</td><td>0.9180</td><td>0.9326</td><td>0.8738</td>
+          </tr>
+          <tr>
+            <td>ResNet50</td><td>UNet</td>
+            <td>0.9556</td><td>0.9150</td><td>0.9534</td><td>0.9109</td><td>0.9330</td><td>0.8745</td>
+          </tr>
+           <tr>
+            <td>ResNet50</td><td>LinTransUnet</td>
+            <td>0.9416</td><td>0.8896</td><td>0.9559</td><td>0.9156</td><td>0.9282</td><td>0.8661</td>
+          </tr>
+          <tr>
+            <td>VGG16</td><td>U²-Net</td>
+            <td>0.9315</td><td>0.8718</td><td>0.9411</td><td>0.8888</td><td>0.8563</td><td>0.7487</td>
+          </tr>
+          <tr>
+            <td>InceptionV3</td><td>SynergyNet</td>
+            <td>0.9575</td><td>0.9184</td><td>0.9546</td><td>0.9131</td><td>0.9339</td><td>0.8759</td>
+          </tr>
+          <tr>
+            <td colspan="2">Swin-Unet</td>
+            <td>0.9319</td><td>0.8725</td><td>0.9409</td><td>0.8884</td><td>0.9173</td><td>0.8472</td>
+          </tr>
+          <tr>
+            <td colspan="2">CCT-Unet</td>
+            <td>0.9321</td><td>0.8728</td><td>0.9347</td><td>0.8774</td><td>0.9281</td><td>0.8658</td>
+          </tr>
+           <tr>
+            <td colspan="2">EaNet</td>
+            <td>0.9287</td><td>0.8669</td><td>0.9390</td><td>0.8850</td><td>0.9242</td><td>0.8592</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section" style="background-color: #f5f5f5;">
+  <div class="container is-max-desktop">
+
+    <h2 class="title is-3 has-text-centered">Classification Performance & Analysis</h2>
+    <div class="content has-text-centered" style="margin-bottom: 30px;">
+      <p>
+        Evaluation of the proposed Hybrid Fusion Models and comparison with state-of-the-art studies.
+      </p>
+    </div>
+
+    <div class="box" style="overflow-x: auto; border-top: 5px solid #ff9800;">
+      <h4 class="title is-5 has-text-centered">Table 2: Classification Performance (SubsetRandomSampler)</h4>
+      <table class="table is-bordered is-striped is-hoverable is-fullwidth has-text-centered is-size-7">
+        <thead style="background-color: #fff3e0;">
+          <tr>
+            <th style="vertical-align: middle;">Model</th>
+            <th colspan="3">Mild</th>
+            <th colspan="3">Moderate</th>
+            <th colspan="3">Severe</th>
+          </tr>
+          <tr>
+            <th>Feature Extractor</th>
+            <th>Prec.</th><th>Rec.</th><th>Acc.</th>
+            <th>Prec.</th><th>Rec.</th><th>Acc.</th>
+            <th>Prec.</th><th>Rec.</th><th>Acc.</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>DenseNet-121</td>
+            <td>0.88</td><td>0.65</td><td>0.65</td>
+            <td>0.23</td><td>0.36</td><td>0.36</td>
+            <td>0.56</td><td>0.60</td><td>0.60</td>
+          </tr>
+          <tr>
+            <td>ResNet-101</td>
+            <td>0.83</td><td>0.71</td><td>0.71</td>
+            <td>0.23</td><td>0.38</td><td>0.38</td>
+            <td>0.51</td><td>0.40</td><td>0.40</td>
+          </tr>
+          <tr>
+            <td>EfficientNet-b0</td>
+            <td>0.84</td><td>0.71</td><td>0.71</td>
+            <td>0.23</td><td>0.31</td><td>0.31</td>
+            <td>0.55</td><td>0.59</td><td>0.59</td>
+          </tr>
+           <tr>
+            <td>ResNet34</td>
+            <td>0.90</td><td>0.71</td><td>0.71</td>
+            <td>0.25</td><td>0.42</td><td>0.42</td>
+            <td>0.52</td><td>0.48</td><td>0.48</td>
+          </tr>
+          <tr>
+            <td>ResNet50+GAP</td>
+            <td>0.75</td><td>0.77</td><td>0.77</td>
+            <td>0.27</td><td>0.08</td><td>0.08</td>
+            <td>0.48</td><td>0.71</td><td>0.71</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <br>
+
+    <div class="box" style="overflow-x: auto; border-top: 5px solid #2196f3;">
+      <h4 class="title is-5 has-text-centered">Table 3: Classification Performance (WeightedRandomSampler)</h4>
+      <table class="table is-bordered is-striped is-hoverable is-fullwidth has-text-centered is-size-7">
+        <thead style="background-color: #e3f2fd;">
+          <tr>
+            <th style="vertical-align: middle;">Model</th>
+            <th colspan="3">Mild</th>
+            <th colspan="3">Moderate</th>
+            <th colspan="3">Severe</th>
+          </tr>
+          <tr>
+            <th>Feature Extractor</th>
+            <th>Prec.</th><th>Rec.</th><th>Acc.</th>
+            <th>Prec.</th><th>Rec.</th><th>Acc.</th>
+            <th>Prec.</th><th>Rec.</th><th>Acc.</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background-color: #bbdefb; font-weight: bold; border: 2px solid #2196f3;">
+            <td>Hybrid7Net6 (Proposed)</td>
+            <td>0.97</td><td>0.77</td><td>0.77</td>
+            <td>0.56</td><td>0.77</td><td>0.77</td>
+            <td>0.67</td><td>0.75</td><td>0.75</td>
+          </tr>
+          <tr>
+            <td>DenseNet-121</td>
+            <td>0.83</td><td>0.95</td><td>0.95</td>
+            <td>0.13</td><td>0.05</td><td>0.05</td>
+            <td>0.64</td><td>0.77</td><td>0.77</td>
+          </tr>
+          <tr>
+            <td>ConvNeXt</td>
+            <td>0.82</td><td>0.95</td><td>0.95</td>
+            <td>0.20</td><td>0.11</td><td>0.11</td>
+            <td>0.63</td><td>0.66</td><td>0.63</td>
+          </tr>
+          <tr>
+            <td>CoAtNet</td>
+            <td>0.78</td><td>0.86</td><td>0.86</td>
+            <td>0.21</td><td>0.14</td><td>0.14</td>
+            <td>0.51</td><td>0.54</td><td>0.54</td>
+          </tr>
+          <tr>
+            <td>Hybrid10Net</td>
+            <td>0.84</td><td>0.91</td><td>0.91</td>
+            <td>0.79</td><td>0.26</td><td>0.26</td>
+            <td>0.58</td><td>0.77</td><td>0.77</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <br>
+
+    <div class="box" style="overflow-x: auto; border-top: 5px solid #9c27b0;">
+      <h4 class="title is-5 has-text-centered">Table 4: Training Configurations</h4>
+      <table class="table is-bordered is-size-7 is-fullwidth">
+        <thead style="background-color: #f3e5f5;">
+          <tr>
+            <th>Configuration</th>
+            <th>DenseNet121 (Mild)</th>
+            <th>CoAtNet (Moderate)</th>
+            <th>CoAtNet (Severe)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Data Augmentation</strong></td>
+            <td>Resize, HFlip 0.5, ShiftScaleRotate 0.05, BrightnessContrast, GaussNoise</td>
+            <td>Same base + stronger minority aug (HFlip 0.8, VFlip 0.5, more noise)</td>
+            <td>Same as Moderate with focus on Severe minority</td>
+          </tr>
+          <tr>
+            <td><strong>Loss Function</strong></td>
+            <td>FocalLoss (alpha=None, gamma=2.0/3.0)</td>
+            <td>FocalLoss with class weights (Moderate weighted 1.5)</td>
+            <td>FocalLoss with class weights (no multiplier)</td>
+          </tr>
+          <tr>
+            <td><strong>Sampler</strong></td>
+            <td>WeightedRandomSampler oversampling rare classes</td>
+            <td>WeightedRandomSampler with inverse frequency + class weights</td>
+            <td>Same as Moderate</td>
+          </tr>
+           <tr>
+            <td><strong>Optimizer</strong></td>
+            <td>AdamW + ReduceLROnPlateau</td>
+            <td>Same as DenseNet121</td>
+            <td>Same as DenseNet121</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <br>
+
+    <div class="box" style="overflow-x: auto; border-top: 5px solid #607d8b;">
+      <h4 class="title is-5 has-text-centered">Table 5: Comparison of Studies on Liver Chirrhosis</h4>
+      <table class="table is-bordered is-striped is-hoverable is-fullwidth has-text-centered is-size-7">
+        <thead style="background-color: #eceff1;">
+          <tr>
+            <th>Study</th>
+            <th>Dataset</th>
+            <th>Segmentation Method</th>
+            <th>Classification Method</th>
+            <th>Performance</th>
+            <th>Explainability</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Jha et al. [2025]</td>
+            <td>T2W 2D</td>
+            <td>MedSegDiff</td>
+            <td>N/A</td>
+            <td>Dice: 0.76</td>
+            <td>Not discussed</td>
+          </tr>
+          <tr>
+            <td>Gupta et al. [2025]</td>
+            <td>T2W 2D</td>
+            <td>2D nnU-Net</td>
+            <td>Masked Attn ResNet-18</td>
+            <td>Dice: 0.96, Acc: 78%</td>
+            <td>Grad-CAM</td>
+          </tr>
+          <tr style="background-color: #cfd8dc; font-weight: bold;">
+            <td>This Study</td>
+            <td>T2W 2D</td>
+            <td>3UResNet50</td>
+            <td>Hybrid7Net6</td>
+            <td>Dice: ~0.95 | Acc: Mild 0.95, Mod 0.80, Sev 0.94</td>
+            <td>LIME + Grad-CAM</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</section>
   
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
