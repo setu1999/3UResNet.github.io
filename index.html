@@ -297,11 +297,11 @@
 <section class="section">
   <div class="container is-max-desktop">
 
-    <h2 class="title is-3 has-text-centered">Performance of the 3UResNet Model</h2>
+    <h2 class="title is-3 has-text-centered">Performance Evaluation</h2>
     
     <div class="content has-text-centered" style="margin-bottom: 20px;">
       <p>
-        Quantitative and Qualitative evaluation demonstrating the robustness of our method compared to state-of-the-art baselines.
+        Comprehensive analysis of the proposed 3UResNet model demonstrating superior accuracy and clinical relevance.
       </p>
     </div>
 
@@ -309,53 +309,88 @@
       
       <div class="item">
         <div style="text-align: center; padding: 10px;">
-          <div style="height: 400px; display: flex; align-items: center; justify-content: center;">
+          <div style="height: 400px; width: 100%; background-color: white; border: 1px solid #ddd; border-radius: 10px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
             <img src="./static/images/Figure-3.drawio (7).drawio.png" 
                  alt="Figure 3" 
-                 style="max-height: 100%; max-width: 100%; width: auto; height: auto; object-fit: contain;">
+                 style="max-height: 95%; max-width: 95%; width: auto; height: auto; object-fit: contain;">
           </div>
-          <p style="margin-top: 15px; font-weight: 500;">
-            Figure 3: Qualitative segmentation results comparing 3UResNet with SwinUnet and TransUNet. Our model shows superior boundary detection.
-          </p>
+          <div style="margin-top: 15px; text-align: justify; padding: 0 10px;">
+            <p style="font-size: 1.1em; font-weight: bold; margin-bottom: 5px; color: #333;">
+              (a) Comparison of the ground truth mask and predicted mask 
+            </p>
+            <p style="font-size: 0.95em; margin-bottom: 5px;">
+              Comparison of the ground truth mask and predicted mask along with error analysis for the 3UResNet model.
+            </p>
+            <p style="font-size: 0.9em; color: #555; font-style: italic;">
+              <strong>Why it's better:</strong> Our ensemble approach effectively preserves local anatomical details that single-model Transformers often miss, ensuring reliable automated segmentation.
+            </p>
+          </div>
         </div>
       </div>
 
       <div class="item">
         <div style="text-align: center; padding: 10px;">
-          <div style="height: 400px; display: flex; align-items: center; justify-content: center;">
+          <div style="height: 400px; width: 100%; background-color: white; border: 1px solid #ddd; border-radius: 10px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
             <img src="./static/images/Figure-4.png" 
                  alt="Figure 4" 
-                 style="max-height: 100%; max-width: 100%; width: auto; height: auto; object-fit: contain;">
+                 style="max-height: 95%; max-width: 95%; width: auto; height: auto; object-fit: contain;">
           </div>
-          <p style="margin-top: 15px; font-weight: 500;">
-            Figure 4: Quantitative comparison. 3UResNet achieved the highest Dice Score (0.9516) and IoU (0.9077) on the test set.
-          </p>
+          <div style="margin-top: 15px; text-align: justify; padding: 0 10px;">
+            <p style="font-size: 1.1em; font-weight: bold; margin-bottom: 5px; color: #333;">
+              (b) Comparison of model logits and predictions f
+            </p>
+            <p style="font-size: 0.95em; margin-bottom: 5px;">
+              The qualitative comparison of liver tumor segmentation across multiple models.
+            </p>
+            <p style="font-size: 0.9em; color: #555; font-style: italic;">
+              <strong>It's importance:</strong> 
+              The samples shows how different architectures capture the disease regions with varying confidence and accuracy.
+            </p>
+          </div>
         </div>
       </div>
 
       <div class="item">
         <div style="text-align: center; padding: 10px;">
-          <div style="height: 400px; display: flex; align-items: center; justify-content: center;">
+          <div style="height: 400px; width: 100%; background-color: white; border: 1px solid #ddd; border-radius: 10px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
             <img src="./static/images/Figure-7.drawio.drawio (1).png" 
                  alt="Figure 7" 
-                 style="max-height: 100%; max-width: 100%; width: auto; height: auto; object-fit: contain;">
+                 style="max-height: 95%; max-width: 95%; width: auto; height: auto; object-fit: contain;">
           </div>
-          <p style="margin-top: 15px; font-weight: 500;">
-            Figure 7: Confusion Matrix for classification. The model shows high accuracy in distinguishing between Mild, Moderate, and Severe stages.
-          </p>
+          <div style="margin-top: 15px; text-align: justify; padding: 0 10px;">
+            <p style="font-size: 1.1em; font-weight: bold; margin-bottom: 5px; color: #333;">
+              (c) LIME explainability
+            </p>
+            <p style="font-size: 0.95em; margin-bottom: 5px;">
+              LIME explainability identifies important regions for mild, moderate, and severe cirrhosis.
+            </p>
+            <p style="font-size: 0.9em; color: #555; font-style: italic;">
+              <strong>It's importance:</strong> 
+              The yellow outlines show the model's focus on specific structural features, with the fragmentation and size of the regions corresponding to the severity of the disease.
+            </p>
+          </div>
         </div>
       </div>
 
       <div class="item">
         <div style="text-align: center; padding: 10px;">
-          <div style="height: 400px; display: flex; align-items: center; justify-content: center;">
+          <div style="height: 400px; width: 100%; background-color: white; border: 1px solid #ddd; border-radius: 10px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
             <img src="./static/images/Figure-8.drawio (2).drawio (1) (1).png" 
                  alt="Figure 8" 
-                 style="max-height: 100%; max-width: 100%; width: auto; height: auto; object-fit: contain;">
+                 style="max-height: 95%; max-width: 95%; width: auto; height: auto; object-fit: contain;">
           </div>
-          <p style="margin-top: 15px; font-weight: 500;">
-            Figure 8: ROC Curves and AUC scores illustrating the diagnostic sensitivity and specificity of the proposed framework.
-          </p>
+          <div style="margin-top: 15px; text-align: justify; padding: 0 10px;">
+            <p style="font-size: 1.1em; font-weight: bold; margin-bottom: 5px; color: #333;">
+              (d) Grad-Cam Analysis
+            </p>
+            <p style="font-size: 0.95em; margin-bottom: 5px;">
+              Grad-CAM indicate the areas the model considers most important for classifying the cirrhosis stages.
+            </p>
+            <p style="font-size: 0.9em; color: #555; font-style: italic;">
+              <strong>Why it's better:</strong> 
+             It highlights the regions of the liver image when predicting the severity of cirrhosis for the 3UResNet model.
+            </p>
+          </div>
         </div>
       </div>
 
