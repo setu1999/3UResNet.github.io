@@ -238,15 +238,57 @@
     <!--/ Abstract. -->
 
     <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <div class="container is-max-desktop">
+    
+    <h2 class="title is-3 has-text-centered" style="margin-bottom: 40px;">
+      Proposed Framework: 3UResNet Pipeline
+    </h2>
+
+    <div class="columns is-centered is-vcentered">
+      
+      <div class="column is-6" style="text-align: left;">
+        
+        <div class="content">
+            <h4 class="title is-5" style="color: #d32f2f; margin-bottom: 0.5rem;">🔴 The Problem</h4>
+            <ul style="margin-top: 0;">
+                <li>Existing methods often <strong>decouple segmentation from classification</strong>, leading to loss of diagnostic context.</li>
+                <li>Current AI tools lack the <strong>explainability</strong> required for clinical trust.</li>
+                <li><strong>Class imbalance</strong> in medical datasets hinders accurate staging of severity.</li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h4 class="title is-5" style="color: #f57c00; margin-bottom: 0.5rem;">🟡 Why We Solved It</h4>
+            <ul style="margin-top: 0;">
+                <li>To enable <strong>automated, timely diagnosis</strong> and precise staging of Liver Cirrhosis on T2-Weighted MRI.</li>
+                <li>To outperform single-model Baselines (e.g., SwinUnet) using a robust ensemble approach.</li>
+                <li>To bridge the gap between pixel-level segmentation and patient-level diagnosis.</li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h4 class="title is-5" style="color: #388e3c; margin-bottom: 0.5rem;">🟢 How We Solved It (3UResNet)</h4>
+            <ul style="margin-top: 0;">
+                <li><strong>Proposed Model:</strong> <em>3UResNet</em>, an ensemble of U-Net, TransUNet++, and Attention U-Net with a <strong>ResNet50 encoder</strong>.</li>
+                <li><strong>Pipeline:</strong> First, precise segmentation (Dice: 0.9516), followed by extraction of <strong>Shape & Visual features</strong>.</li>
+                <li><strong>Classification:</strong> Utilized <strong>DenseNet121</strong> (for Mild) and <strong>CoAnNet</strong> (for Moderate/Severe) with WeightedRandom Sampler to mitigate imbalance.</li>
+            </ul>
         </div>
       </div>
+
+      <div class="column is-6 has-text-centered">
+        <div style="border: 1px solid #ddd; padding: 5px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+            <img src="./static/images/3UResNet_Architecture.png" 
+                 alt="Architecture of 3UResNet" 
+                 style="width: 100%; border-radius: 5px;">
+            <p class="is-size-7 has-text-weight-bold" style="margin-top: 10px;">
+                Figure: The proposed 3UResNet Ensemble Architecture and Classification Pipeline.
+            </p>
+        </div>
+      </div>
+
     </div>
+  </div>
     <!--/ Paper video. -->
   </div>
 </section>
