@@ -297,139 +297,63 @@
 <section class="section">
   <div class="container is-max-desktop">
 
-    <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
-      </div>
+    <h2 class="title is-3 has-text-centered">Performance of the 3UResNet Model</h2>
+    
+    <div class="content has-text-centered" style="margin-bottom: 20px;">
+      <p>
+        Quantitative and Qualitative evaluation demonstrating the robustness of our method compared to state-of-the-art baselines.
+      </p>
     </div>
-    <!--/ Matting. -->
 
-    <!-- Animation. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
-
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
-        <div class="content has-text-justified">
-          <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
-        </div>
-        <br/>
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Re-rendering. -->
-
-      </div>
-    </div>
-    <!--/ Animation. -->
-
-
-    <!-- Concurrent Work. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
+    <div id="results-carousel" class="carousel results-carousel">
+      
+      <div class="item">
+        <div style="text-align: center; padding: 10px;">
+          <img src="./static/images/Figure-3.drawio (7).drawio.png" 
+               alt="Figure 3" 
+               style="max-height: 400px; width: auto; margin: 0 auto; border-radius: 5px;">
+          <p style="margin-top: 15px; font-weight: 500;">
+            Figure 3: Qualitative segmentation results comparing 3UResNet with SwinUnet and TransUNet. Our model shows superior boundary detection.
           </p>
         </div>
       </div>
-    </div>
-    <!--/ Concurrent Work. -->
 
-  </div>
+      <div class="item">
+        <div style="text-align: center; padding: 10px;">
+          <img src="./static/images/Figure-4.png" 
+               alt="Figure 4" 
+               style="max-height: 400px; width: auto; margin: 0 auto; border-radius: 5px;">
+          <p style="margin-top: 15px; font-weight: 500;">
+            Figure 4: Quantitative comparison. 3UResNet achieved the highest Dice Score (0.9516) and IoU (0.9077) on the test set.
+          </p>
+        </div>
+      </div>
+
+      <div class="item">
+        <div style="text-align: center; padding: 10px;">
+          <img src="./static/images/Figure-7.drawio.drawio (1).png" 
+               alt="Figure 7" 
+               style="max-height: 400px; width: auto; margin: 0 auto; border-radius: 5px;">
+          <p style="margin-top: 15px; font-weight: 500;">
+            Figure 7: Confusion Matrix for classification. The model shows high accuracy in distinguishing between Mild, Moderate, and Severe stages.
+          </p>
+        </div>
+      </div>
+
+      <div class="item">
+        <div style="text-align: center; padding: 10px;">
+          <img src="./static/images/Figure-8.drawio (2).drawio (1) (1).png" 
+               alt="Figure 8" 
+               style="max-height: 400px; width: auto; margin: 0 auto; border-radius: 5px;">
+          <p style="margin-top: 15px; font-weight: 500;">
+            Figure 8: ROC Curves and AUC scores illustrating the diagnostic sensitivity and specificity of the proposed framework.
+          </p>
+        </div>
+      </div>
+
+    </div>
+    </div>
 </section>
-
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
