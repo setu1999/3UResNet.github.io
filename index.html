@@ -305,23 +305,25 @@
       </p>
     </div>
 
-    <div id="results-carousel" class="carousel results-carousel">
+    <div id="results-carousel" class="carousel results-carousel" style="min-height: 500px;">
       
       <div class="item">
-        <div style="text-align: center; padding: 10px;">
-          <div style="height: 400px; width: 100%; background-color: white; border: 1px solid #ddd; border-radius: 10px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+        <div style="text-align: center; padding: 10px; height: 100%;">
+          
+          <div style="height: 280px; width: 100%; background-color: white; border: 1px solid #ddd; border-radius: 10px; display: flex; align-items: center; justify-content: center; overflow: hidden; margin-bottom: 10px;">
             <img src="./static/images/Figure-3.drawio (7).drawio.png" 
                  alt="Figure 3" 
                  style="max-height: 95%; max-width: 95%; width: auto; height: auto; object-fit: contain;">
           </div>
-          <div style="margin-top: 15px; text-align: justify; padding: 0 10px;">
-            <p style="font-size: 1.1em; font-weight: bold; margin-bottom: 5px; color: #333;">
-              (a) Comparison of the ground truth mask and predicted mask 
+          
+          <div style="text-align: justify; padding: 0 5px;">
+            <p style="font-size: 1.1em; font-weight: bold; margin-bottom: 5px; color: black !important;">
+              (a) Comparison of the ground truth and predicted mask
             </p>
-            <p style="font-size: 0.95em; margin-bottom: 5px;">
+            <p style="font-size: 0.9em; margin-bottom: 5px; color: #222 !important;">
               Comparison of the ground truth mask and predicted mask along with error analysis for the 3UResNet model.
             </p>
-            <p style="font-size: 0.9em; color: #555; font-style: italic;">
+            <p style="font-size: 0.85em; color: #444 !important; font-style: italic;">
               <strong>Why it's better:</strong> Our ensemble approach effectively preserves local anatomical details that single-model Transformers often miss, ensuring reliable automated segmentation.
             </p>
           </div>
@@ -329,66 +331,69 @@
       </div>
 
       <div class="item">
-        <div style="text-align: center; padding: 10px;">
-          <div style="height: 400px; width: 100%; background-color: white; border: 1px solid #ddd; border-radius: 10px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+        <div style="text-align: center; padding: 10px; height: 100%;">
+          
+          <div style="height: 280px; width: 100%; background-color: white; border: 1px solid #ddd; border-radius: 10px; display: flex; align-items: center; justify-content: center; overflow: hidden; margin-bottom: 10px;">
             <img src="./static/images/Figure-4.png" 
                  alt="Figure 4" 
                  style="max-height: 95%; max-width: 95%; width: auto; height: auto; object-fit: contain;">
           </div>
-          <div style="margin-top: 15px; text-align: justify; padding: 0 10px;">
-            <p style="font-size: 1.1em; font-weight: bold; margin-bottom: 5px; color: #333;">
-              (b) Comparison of model logits and predictions f
+          
+          <div style="text-align: justify; padding: 0 5px;">
+            <p style="font-size: 1.1em; font-weight: bold; margin-bottom: 5px; color: black !important;">
+              (b) Comparison of model logits and predictions
             </p>
-            <p style="font-size: 0.95em; margin-bottom: 5px;">
-              The qualitative comparison of liver tumor segmentation across multiple models.
+            <p style="font-size: 0.9em; margin-bottom: 5px; color: #222 !important;">
+              The qualitative comparison of liver tumor segmentation across multiple models showing prediction variations.
             </p>
-            <p style="font-size: 0.9em; color: #555; font-style: italic;">
-              <strong>It's importance:</strong> 
-              The samples shows how different architectures capture the disease regions with varying confidence and accuracy.
+            <p style="font-size: 0.85em; color: #444 !important; font-style: italic;">
+              <strong>Why it matters:</strong> The samples show how different architectures capture the disease regions with varying confidence and accuracy compared to our method.
             </p>
           </div>
         </div>
       </div>
 
       <div class="item">
-        <div style="text-align: center; padding: 10px;">
-          <div style="height: 400px; width: 100%; background-color: white; border: 1px solid #ddd; border-radius: 10px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+        <div style="text-align: center; padding: 10px; height: 100%;">
+          
+          <div style="height: 280px; width: 100%; background-color: white; border: 1px solid #ddd; border-radius: 10px; display: flex; align-items: center; justify-content: center; overflow: hidden; margin-bottom: 10px;">
             <img src="./static/images/Figure-7.drawio.drawio (1).png" 
                  alt="Figure 7" 
                  style="max-height: 95%; max-width: 95%; width: auto; height: auto; object-fit: contain;">
           </div>
-          <div style="margin-top: 15px; text-align: justify; padding: 0 10px;">
-            <p style="font-size: 1.1em; font-weight: bold; margin-bottom: 5px; color: #333;">
-              (c) LIME explainability
+          
+          <div style="text-align: justify; padding: 0 5px;">
+            <p style="font-size: 1.1em; font-weight: bold; margin-bottom: 5px; color: black !important;">
+              (c) LIME Explainability Analysis
             </p>
-            <p style="font-size: 0.95em; margin-bottom: 5px;">
-              LIME explainability identifies important regions for mild, moderate, and severe cirrhosis.
+            <p style="font-size: 0.9em; margin-bottom: 5px; color: #222 !important;">
+              LIME explainability identifies important regions for mild, moderate, and severe cirrhosis classification.
             </p>
-            <p style="font-size: 0.9em; color: #555; font-style: italic;">
-              <strong>It's importance:</strong> 
-              The yellow outlines show the model's focus on specific structural features, with the fragmentation and size of the regions corresponding to the severity of the disease.
+            <p style="font-size: 0.85em; color: #444 !important; font-style: italic;">
+              <strong>Why it matters:</strong> The yellow outlines demonstrate the model's focus on specific structural features, correlating fragmentation and region size with disease severity.
             </p>
           </div>
         </div>
       </div>
 
       <div class="item">
-        <div style="text-align: center; padding: 10px;">
-          <div style="height: 400px; width: 100%; background-color: white; border: 1px solid #ddd; border-radius: 10px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+        <div style="text-align: center; padding: 10px; height: 100%;">
+          
+          <div style="height: 280px; width: 100%; background-color: white; border: 1px solid #ddd; border-radius: 10px; display: flex; align-items: center; justify-content: center; overflow: hidden; margin-bottom: 10px;">
             <img src="./static/images/Figure-8.drawio (2).drawio (1) (1).png" 
                  alt="Figure 8" 
                  style="max-height: 95%; max-width: 95%; width: auto; height: auto; object-fit: contain;">
           </div>
-          <div style="margin-top: 15px; text-align: justify; padding: 0 10px;">
-            <p style="font-size: 1.1em; font-weight: bold; margin-bottom: 5px; color: #333;">
-              (d) Grad-Cam Analysis
+          
+          <div style="text-align: justify; padding: 0 5px;">
+            <p style="font-size: 1.1em; font-weight: bold; margin-bottom: 5px; color: black !important;">
+              (d) Grad-CAM Attention Map
             </p>
-            <p style="font-size: 0.95em; margin-bottom: 5px;">
-              Grad-CAM indicate the areas the model considers most important for classifying the cirrhosis stages.
+            <p style="font-size: 0.9em; margin-bottom: 5px; color: #222 !important;">
+              Grad-CAM visualizations indicating the areas the model considers most important for classifying cirrhosis stages.
             </p>
-            <p style="font-size: 0.9em; color: #555; font-style: italic;">
-              <strong>Why it's better:</strong> 
-             It highlights the regions of the liver image when predicting the severity of cirrhosis for the 3UResNet model.
+            <p style="font-size: 0.85em; color: #444 !important; font-style: italic;">
+              <strong>Why it's better:</strong> It highlights the precise regions of the liver that influenced the 3UResNet model's prediction, providing transparent clinical validation.
             </p>
           </div>
         </div>
