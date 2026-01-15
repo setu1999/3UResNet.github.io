@@ -296,106 +296,132 @@
 <section class="section">
   <div class="container is-max-desktop">
 
-    <h2 class="title is-3 has-text-centered">Performance Evaluation</h2>
-    
-    <div class="content has-text-centered" style="margin-bottom: 20px;">
+    <h2 class="title is-3 has-text-centered">
+      Performance Evaluation
+    </h2>
+
+    <div class="content has-text-centered mb-5">
       <p>
         Comprehensive analysis of the proposed 3UResNet model demonstrating superior accuracy and clinical relevance.
       </p>
     </div>
 
-    <div id="results-carousel" class="carousel results-carousel" style="min-height: 550px;">
-      
-      <div class="item">
-        <div style="background-color: white; border: 1px solid #ddd; border-radius: 10px; padding: 15px; margin: 10px; height: 500px; display: flex; flex-direction: column; justify-content: flex-start;">
-          
-          <div style="height: 240px; width: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden; margin-bottom: 10px;">
-            <img src="./static/images/Figure-3.drawio (7).drawio.png" 
-                 alt="Figure 3" 
-                 style="max-height: 100%; max-width: 100%; object-fit: contain;">
+    <div id="results-carousel" class="carousel results-carousel">
+
+      <!-- (a) -->
+      <div class="carousel-item is-active">
+        <div class="box" style="height:500px; display:flex; flex-direction:column; justify-content:space-between;">
+
+          <div class="has-text-centered" style="height:220px;">
+            <img src="./static/images/Figure-3.drawio (7).drawio.png"
+                 alt="Figure 3"
+                 style="max-height:100%;" />
           </div>
-          
-          <div style="text-align: left; overflow-y: auto;">
-            <h4 style="font-size: 1.1em; font-weight: bold; color: #000; margin-bottom: 8px;">(a) Qualitative Segmentation</h4>
-            <p style="font-size: 0.9em; color: #333; margin-bottom: 8px; line-height: 1.4;">
+
+          <div>
+            <h4 class="has-text-weight-bold mb-2">
+              (a) Qualitative Segmentation
+            </h4>
+
+            <p class="mb-3">
               Comparison of the ground truth mask and predicted mask along with error analysis for the 3UResNet model.
             </p>
-            <div style="background-color: #f0f8ff; padding: 8px; border-radius: 5px; border-left: 3px solid #2196f3;">
-              <p style="font-size: 0.85em; color: #0d47a1; font-style: italic; margin-bottom: 0;">
-                <strong>Why it's better:</strong> Our ensemble approach effectively preserves local anatomical details that single-model Transformers often miss.
-              </p>
+
+            <div class="notification is-light is-info">
+              <em>
+                <strong>Why it's better:</strong>
+                Our ensemble approach preserves local anatomical details often missed by Transformers.
+              </em>
             </div>
           </div>
 
         </div>
       </div>
 
-      <div class="item">
-        <div style="background-color: white; border: 1px solid #ddd; border-radius: 10px; padding: 15px; margin: 10px; height: 500px; display: flex; flex-direction: column; justify-content: flex-start;">
-          
-          <div style="height: 240px; width: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden; margin-bottom: 10px;">
-            <img src="./static/images/Figure-4.png" 
-                 alt="Figure 4" 
-                 style="max-height: 100%; max-width: 100%; object-fit: contain;">
+      <!-- (b) -->
+      <div class="carousel-item">
+        <div class="box" style="height:500px; display:flex; flex-direction:column; justify-content:space-between;">
+
+          <div class="has-text-centered" style="height:220px;">
+            <img src="./static/images/Figure-4.png"
+                 alt="Figure 4"
+                 style="max-height:100%;" />
           </div>
-          
-          <div style="text-align: left; overflow-y: auto;">
-            <h4 style="font-size: 1.1em; font-weight: bold; color: #000; margin-bottom: 8px;">(b) Quantitative Comparison</h4>
-            <p style="font-size: 0.9em; color: #333; margin-bottom: 8px; line-height: 1.4;">
-              The qualitative comparison of liver tumor segmentation across multiple models showing prediction variations.
+
+          <div>
+            <h4 class="has-text-weight-bold mb-2">
+              (b) Quantitative Comparison
+            </h4>
+
+            <p class="mb-3">
+              Qualitative comparison of liver tumor segmentation across multiple models showing prediction variations.
             </p>
-            <div style="background-color: #f0f8ff; padding: 8px; border-radius: 5px; border-left: 3px solid #2196f3;">
-              <p style="font-size: 0.85em; color: #0d47a1; font-style: italic; margin-bottom: 0;">
-                <strong>Why it matters:</strong> Shows how different architectures capture disease regions with varying confidence compared to our method.
-              </p>
+
+            <div class="notification is-light is-info">
+              <em>
+                <strong>Why it matters:</strong>
+                Highlights architectural differences in disease-region confidence.
+              </em>
             </div>
           </div>
 
         </div>
       </div>
 
-      <div class="item">
-        <div style="background-color: white; border: 1px solid #ddd; border-radius: 10px; padding: 15px; margin: 10px; height: 500px; display: flex; flex-direction: column; justify-content: flex-start;">
-          
-          <div style="height: 240px; width: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden; margin-bottom: 10px;">
-            <img src="./static/images/Figure-7.drawio.drawio (1).png" 
-                 alt="Figure 7" 
-                 style="max-height: 100%; max-width: 100%; object-fit: contain;">
+      <!-- (c) -->
+      <div class="carousel-item">
+        <div class="box" style="height:500px; display:flex; flex-direction:column; justify-content:space-between;">
+
+          <div class="has-text-centered" style="height:220px;">
+            <img src="./static/images/Figure-7.drawio.drawio (1).png"
+                 alt="Figure 7"
+                 style="max-height:100%;" />
           </div>
-          
-          <div style="text-align: left; overflow-y: auto;">
-            <h4 style="font-size: 1.1em; font-weight: bold; color: #000; margin-bottom: 8px;">(c) LIME Explainability</h4>
-            <p style="font-size: 0.9em; color: #333; margin-bottom: 8px; line-height: 1.4;">
+
+          <div>
+            <h4 class="has-text-weight-bold mb-2">
+              (c) LIME Explainability
+            </h4>
+
+            <p class="mb-3">
               LIME explainability identifies important regions for mild, moderate, and severe cirrhosis classification.
             </p>
-            <div style="background-color: #f0f8ff; padding: 8px; border-radius: 5px; border-left: 3px solid #2196f3;">
-              <p style="font-size: 0.85em; color: #0d47a1; font-style: italic; margin-bottom: 0;">
-                <strong>Why it matters:</strong> Demonstrates the model's focus on structural features like fragmentation and region size.
-              </p>
+
+            <div class="notification is-light is-info">
+              <em>
+                <strong>Why it matters:</strong>
+                Confirms the model focuses on clinically meaningful structures.
+              </em>
             </div>
           </div>
 
         </div>
       </div>
 
-      <div class="item">
-        <div style="background-color: white; border: 1px solid #ddd; border-radius: 10px; padding: 15px; margin: 10px; height: 500px; display: flex; flex-direction: column; justify-content: flex-start;">
-          
-          <div style="height: 240px; width: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden; margin-bottom: 10px;">
-            <img src="./static/images/Figure-8.drawio (2).drawio (1) (1).png" 
-                 alt="Figure 8" 
-                 style="max-height: 100%; max-width: 100%; object-fit: contain;">
+      <!-- (d) -->
+      <div class="carousel-item">
+        <div class="box" style="height:500px; display:flex; flex-direction:column; justify-content:space-between;">
+
+          <div class="has-text-centered" style="height:220px;">
+            <img src="./static/images/Figure-8.drawio (2).drawio (1) (1).png"
+                 alt="Figure 8"
+                 style="max-height:100%;" />
           </div>
-          
-          <div style="text-align: left; overflow-y: auto;">
-            <h4 style="font-size: 1.1em; font-weight: bold; color: #000; margin-bottom: 8px;">(d) Grad-CAM Analysis</h4>
-            <p style="font-size: 0.9em; color: #333; margin-bottom: 8px; line-height: 1.4;">
-              Grad-CAM visualizations indicating the areas the model considers most important for classifying cirrhosis stages.
+
+          <div>
+            <h4 class="has-text-weight-bold mb-2">
+              (d) Grad-CAM Analysis
+            </h4>
+
+            <p class="mb-3">
+              Grad-CAM visualizations indicating regions critical for cirrhosis stage prediction.
             </p>
-            <div style="background-color: #f0f8ff; padding: 8px; border-radius: 5px; border-left: 3px solid #2196f3;">
-              <p style="font-size: 0.85em; color: #0d47a1; font-style: italic; margin-bottom: 0;">
-                <strong>Why it's better:</strong> Highlights precise liver regions influencing prediction, providing transparent clinical validation.
-              </p>
+
+            <div class="notification is-light is-info">
+              <em>
+                <strong>Why it's better:</strong>
+                Provides transparent, clinically interpretable validation.
+              </em>
             </div>
           </div>
 
@@ -405,6 +431,8 @@
     </div>
   </div>
 </section>
+
+  
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
