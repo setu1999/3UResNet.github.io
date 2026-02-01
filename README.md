@@ -12,7 +12,7 @@ If you find this work useful, please cite our paper:
 ```bibtex
 @article{setu2025explainable,
   author    = {Setu, Deblina Mazumder and Dey, Samrat Kumar and Islam, Tania and Howlader, Arpita and Biswas, Saurov Chandra and Mazumder, Rashed and Siddiqi, Umme Raihan and Rahman, Md. Mahbubur},
-  title     = {Explainable AI for Segmentation and Classification of Liver Cirrhosis on T2-Weighted MRI},
+  title     = {Multiclass Liver Cirrhosis Segmentation and Severity Staging on T2-Weighted MRI Using 3UResNet Explainability and Per-Class Deep Expert Classifiers},
   journal   = {arXiv preprint},
   year      = {2025},
 }
