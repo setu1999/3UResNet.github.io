@@ -1,16 +1,18 @@
-# Nerfies
+# 3UResNet: Liver Cirrhosis Analysis
 
-This is the repository that contains source code for the [Nerfies website](https://nerfies.github.io).
+This is the repository that contains source code for the **3UResNet** project website.
 
-If you find Nerfies useful for your work please cite:
-```
-@article{park2021nerfies
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+**Project Page:** [https://setu1999.github.io/3UResNet.github.io/](https://setu1999.github.io/3UResNet.github.io/)
+
+### Abstract
+3UResNet is a unified explainable framework for the Segmentation and Classification of Liver Cirrhosis on T2-Weighted MRI using Deep Learning. This repository hosts the project website and supplementary materials.
+
+### Citation
+If you find this work useful, please cite our paper:
+```bibtex
+@article{setu2025explainable,
+  author    = {Setu, Deblina Mazumder and Dey, Samrat Kumar and Islam, Tania and Howlader, Arpita and Biswas, Saurov Chandra and Mazumder, Rashed and Siddiqi, Umme Raihan and Rahman, Md. Mahbubur},
+  title     = {Explainable AI for Segmentation and Classification of Liver Cirrhosis on T2-Weighted MRI},
+  journal   = {arXiv preprint},
+  year      = {2025},
 }
-```
-
-# Website License
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
